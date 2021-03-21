@@ -7,9 +7,31 @@ public class GameManager : MonoBehaviour
 {
     public List<FoodSO> foodList;
     public Button recipeSelect;
+    public Text foodName;
 
-    private void Start()
+    private int foodIndex = 0;
+
+    private void Update()
     {
-        recipeSelect.image.sprite = foodList[0].foodImage;
+        recipeSelect.image.sprite = foodList[foodIndex].foodImage;
+        foodName.text = foodList[foodIndex].iName;
+    }
+
+    public void ChangeRight()
+    {
+        foodIndex++;
+        if (foodIndex > 2)
+        {
+            foodIndex = 0;
+        }
+    }
+
+    public void ChangeLeft()
+    {
+        foodIndex--;
+        if (foodIndex < 0)
+        {
+            foodIndex = 2;
+        }
     }
 }

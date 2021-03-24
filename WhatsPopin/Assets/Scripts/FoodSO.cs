@@ -7,4 +7,5 @@ public class FoodSO : ScriptableObject
 {
     public string iName;
     public Sprite foodImage;
+    public List<GameObject> ingredientsList;
 }

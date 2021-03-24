@@ -10,7 +10,12 @@ public class GameManager : MonoBehaviour
     public Text foodName;
     public GameObject gameWonUI;
 
-    private int foodIndex = 0;
+    public int foodIndex = 0;
+
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     private void Update()
     {

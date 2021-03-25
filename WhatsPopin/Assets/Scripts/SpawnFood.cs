@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnFood : MonoBehaviour
 {
-    //public GameObject foodPrefab;
+    public Text food1;
+    public Text food2;
+
     public Transform location;
     private GameManager gm;
 
@@ -18,10 +21,15 @@ public class SpawnFood : MonoBehaviour
         gm = gameMger.GetComponent<GameManager>();
         index = gm.foodIndex;
         spawnTime = Time.time + 2.0f;
+
+        food1.text = " " + gm.foodList[index].ingredientName[0] + ": " + gm.foodList[index].ingredientsLeft[0];
+        food2.text = " " + gm.foodList[index].ingredientName[1] + ": " + gm.foodList[index].ingredientsLeft[1];
     }
 
     private void Update()
     {
+        
+
         if (Time.time > spawnTime)
         {
             Spawner();

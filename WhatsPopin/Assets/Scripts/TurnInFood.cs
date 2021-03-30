@@ -22,7 +22,7 @@ public class TurnInFood : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Plate"))
         {
-            FindObjectOfType<GameManager>().GameOver();
+            FindObjectOfType<GameWon>().GameOver();
 
         }
     }

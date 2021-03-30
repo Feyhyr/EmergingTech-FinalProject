@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public List<FoodSO> foodList;
     public Button recipeSelect;
     public Text foodName;
-    public GameObject gameWonUI;
 
     public int foodIndex = 0;
 
@@ -39,12 +38,6 @@ public class GameManager : MonoBehaviour
         {
             foodIndex = 2;
         }
-    }
-
-    public void GameOver()
-    {
-        gameWonUI.SetActive(true);
-        //Time.timeScale = 0f;
     }
 
 }

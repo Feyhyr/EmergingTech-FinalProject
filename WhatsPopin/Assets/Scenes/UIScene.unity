@@ -863,6 +863,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 24386e2098419b240a60e8c17a4b4fee, type: 2}
   recipeSelect: {fileID: 888531615}
   foodName: {fileID: 280834752}
+  gameWonUI: {fileID: 0}
   foodIndex: 0
 --- !u!4 &1194330817
 Transform:
@@ -872,7 +873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194330814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 893.74664, y: 705.743, z: 21.532343}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

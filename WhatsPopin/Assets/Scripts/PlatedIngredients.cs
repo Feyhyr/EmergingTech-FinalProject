@@ -8,7 +8,7 @@ public class PlatedIngredients : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Food"))
         {
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }

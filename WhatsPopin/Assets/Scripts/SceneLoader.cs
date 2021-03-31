@@ -11,4 +11,10 @@ public class SceneLoader : MonoBehaviour
 
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Game has quit!");
+        Application.Quit();
+    }
+
 }

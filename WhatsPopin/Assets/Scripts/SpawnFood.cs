@@ -44,4 +44,5 @@ public class SpawnFood : MonoBehaviour
         instance.transform.parent = location;
         Destroy(instance, prefabTimer);
     }
+
 }

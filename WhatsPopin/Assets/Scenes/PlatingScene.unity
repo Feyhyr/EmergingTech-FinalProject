@@ -3279,11 +3279,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 1953577165050227329, guid: 8e9bdb5bf8e1022489334c16a0e43dce,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7454391085631620197, guid: 8e9bdb5bf8e1022489334c16a0e43dce,
         type: 3}
       propertyPath: myFoods.Array.size

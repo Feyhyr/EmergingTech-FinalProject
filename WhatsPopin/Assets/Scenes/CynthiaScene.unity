@@ -846,6 +846,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodText: {fileID: 1963354296}
   location: {fileID: 1172384744}
+  randomIndex: 0
+  index: 0
 --- !u!1001 &560303665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3612,3 +3614,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2121110663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8845438406356163527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.232
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067991965998915502, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231262617996244027, guid: ef007c841fe0e444abbe38714abae614,
+        type: 3}
+      propertyPath: m_Name
+      value: FoodVentMini
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef007c841fe0e444abbe38714abae614, type: 3}

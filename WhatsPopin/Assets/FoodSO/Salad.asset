@@ -15,5 +15,7 @@ MonoBehaviour:
   iName: Salad
   foodImage: {fileID: 21300000, guid: 6187bd9b5aeaf45789b30a403cf287f8, type: 3}
   ingredientsList:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1000011262040222, guid: 196fe542ad163b149adf1ca04c19c753, type: 3}
+  ingredientName:
+  - Leaf
+  ingredientsLeft: 0c000000

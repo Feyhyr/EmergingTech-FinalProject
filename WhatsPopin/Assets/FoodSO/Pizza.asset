@@ -12,12 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e80ca5cc785fa40a0cdaadfd712ba0, type: 3}
   m_Name: Pizza
   m_EditorClassIdentifier: 
-  iName: Burger
+  iName: Pizza
   foodImage: {fileID: 21300000, guid: 763621fca9c634c4b9c4780023673743, type: 3}
   ingredientsList:
-  - {fileID: 1998942852648348, guid: 7cd627a1919ab7748980fbcec674e6a0, type: 3}
-  - {fileID: 1728772748170624, guid: 76585dba3314f224f9db50d0dde3c01a, type: 3}
+  - {fileID: 1000010528404258, guid: b7d70d80ddd390f41a1bdde5957f74f0, type: 3}
+  - {fileID: 1000013284424148, guid: b29c3addc4240254785fef8671d1291b, type: 3}
+  - {fileID: 1000014236023566, guid: a2a488e7caca6bd4280bf13b8e973858, type: 3}
+  - {fileID: 1000013741648814, guid: 789e3e78d5881e844ba2a11afa41cbde, type: 3}
+  - {fileID: 1067201021930494, guid: 097013ceeb8052648be3891c0984df9a, type: 3}
   ingredientName:
-  - Apple
-  - Pizza
-  ingredientsLeft: 0300000005000000
+  - Cheese
+  - Tomato
+  - Chili
+  - Pepper
+  - Onion
+  ingredientsLeft: 0400000007000000030000000300000002000000

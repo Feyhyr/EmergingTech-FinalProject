@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class SpawnFood : MonoBehaviour
 {
-    public Text food1;
-    public Text food2;
+    public Text foodText;
 
     public Transform location;
     private GameManager gm;
+    public int randomIndex;
 
     float spawnTime;
     float prefabTimer = 3.0f;
-    int index;
+    public int index;
 
     private void Start()
     {
@@ -22,25 +22,40 @@ public class SpawnFood : MonoBehaviour
         index = gm.foodIndex;
         spawnTime = Time.time + 2.0f;
 
-        food1.text = " " + gm.foodList[index].ingredientName[0] + ": " + gm.foodList[index].ingredientsLeft[0];
-        food2.text = " " + gm.foodList[index].ingredientName[1] + ": " + gm.foodList[index].ingredientsLeft[1];
+        gm.foodList[0].ingredientsLeft[0] = 4;
+        gm.foodList[0].ingredientsLeft[1] = 7;
+        gm.foodList[0].ingredientsLeft[2] = 3;
+        gm.foodList[0].ingredientsLeft[3] = 3;
+        gm.foodList[0].ingredientsLeft[4] = 2;
+
+        gm.foodList[1].ingredientsLeft[0] = 12;
+
+        gm.foodList[2].ingredientsLeft[0] = 5;
+        gm.foodList[2].ingredientsLeft[1] = 5;
+        gm.foodList[2].ingredientsLeft[2] = 5;
     }
 
     private void Update()
     {
-        
-
         if (Time.time > spawnTime)
         {
             Spawner();
 
             spawnTime += 2.0f;
         }
+
+        foodText.text = "";
+
+        for (int i = 0; i < gm.foodList[index].ingredientsList.Count; i++)
+        {
+            foodText.text += gm.foodList[index].ingredientName[i] + ": " + gm.foodList[index].ingredientsLeft[i] + "\n";
+        }
     }
 
     public void Spawner()
     {
-        GameObject instance = Instantiate(gm.foodList[index].ingredientsList[Random.Range(0, gm.foodList[index].ingredientsList.Count)], location.position + new Vector3(Random.Range(-2, 2), 0, 0), Random.rotation);
+        randomIndex = Random.Range(0, gm.foodList[index].ingredientsList.Count);
+        GameObject instance = Instantiate(gm.foodList[index].ingredientsList[randomIndex], location.position + new Vector3(Random.Range(-2, 2), 0, 0), Random.rotation);
         instance.transform.parent = location;
         Destroy(instance, prefabTimer);
     }

@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1815687892593156614}
+  - component: {fileID: 2751549719234568242}
+  - component: {fileID: -7208096126137787283}
   m_Layer: 0
   m_Name: Nigiri_Sake
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +33,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2751549719234568242
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983551931403042585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2887483, y: 0.2661389, z: 0.6458793}
+  m_Center: {x: 0.013026759, y: 0.12369442, z: 0.004238814}
+--- !u!54 &-7208096126137787283
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983551931403042585}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2233632276457332458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,11 +69,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1815687892593156614}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 6a549f1a6f6fb054686c48643afbfcb4,
-        type: 3}
-      propertyPath: m_Name
-      value: Nigiri_Sake
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6a549f1a6f6fb054686c48643afbfcb4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -103,6 +129,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9fbce39ef05badc4d9b4d394f2031730, type: 2}
+    - target: {fileID: -927199367670048503, guid: 6a549f1a6f6fb054686c48643afbfcb4,
+        type: 3}
+      propertyPath: m_Name
+      value: Nigiri_Sake
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a549f1a6f6fb054686c48643afbfcb4, type: 3}
 --- !u!4 &6594888842871813616 stripped

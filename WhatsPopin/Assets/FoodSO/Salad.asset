@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Salad
   m_EditorClassIdentifier: 
   iName: Salad
-  foodImage: {fileID: 21300000, guid: 6187bd9b5aeaf45789b30a403cf287f8, type: 3}
+  foodImage: {fileID: 21300036, guid: 37607ec1aab56e349af84a980f685a4b, type: 3}
   ingredientsList:
   - {fileID: 1000011262040222, guid: 196fe542ad163b149adf1ca04c19c753, type: 3}
   ingredientName:

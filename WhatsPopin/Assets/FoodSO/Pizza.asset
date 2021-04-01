@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4e80ca5cc785fa40a0cdaadfd712ba0, type: 3}
-  m_Name: Burger
+  m_Name: Pizza
   m_EditorClassIdentifier: 
   iName: Burger
   foodImage: {fileID: 21300000, guid: 763621fca9c634c4b9c4780023673743, type: 3}

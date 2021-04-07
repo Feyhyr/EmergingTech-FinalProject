@@ -11,6 +11,21 @@ public class GameManager : MonoBehaviour
 
     public int foodIndex = 0;
 
+    static GameManager instance;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);

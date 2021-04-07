@@ -70,7 +70,7 @@ public class SpawnFood : MonoBehaviour
 
         if (isReady())
         {
-            SceneManager.LoadSceneAsync("PlatingScene");
+            SceneManager.LoadScene("PlatingScene");
         }
     }
 

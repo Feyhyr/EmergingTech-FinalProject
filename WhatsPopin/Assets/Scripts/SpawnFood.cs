@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SpawnFood : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class SpawnFood : MonoBehaviour
 
     float spawnTime;
     float prefabTimer = 3.0f;
+    bool allReady = true;
     public int index;
 
     public AudioClip audioSFX;
@@ -57,13 +59,26 @@ public class SpawnFood : MonoBehaviour
         {
             foodText.text += gm.foodList[index].ingredientName[i] + ": " + gm.foodList[index].ingredientsLeft[i] + "\n";
         }
+
+        foreach (int check in gm.foodList[index].ingredientsLeft)
+        {
+            if (check != 0)
+            {
+                allReady = false;
+            }
+        }
+
+        if (allReady)
+        {
+            SceneManager.LoadSceneAsync("PlatingScene");
+        }
     }
 
     public void Spawner()
     {
         PlayAudio();
         randomIndex = Random.Range(0, gm.foodList[index].ingredientsList.Count);
-        GameObject instance = Instantiate(gm.foodList[index].ingredientsList[randomIndex], location.position + new Vector3(Random.Range(-2, 2), 0, 0), Random.rotation);
+        GameObject instance = Instantiate(gm.foodList[index].ingredientsList[randomIndex], location.position + new Vector3(Random.Range(-1, 2), 0, 0), Random.rotation);
         instance.transform.parent = location;
         Destroy(instance, prefabTimer);
     }

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iName: Sushi
   foodImage: {fileID: 21300064, guid: 37607ec1aab56e349af84a980f685a4b, type: 3}
+  foodPrefab: {fileID: 6180362052920474885, guid: d4af38b773bcbda40a14a75935de5d63,
+    type: 3}
   ingredientsList:
   - {fileID: 1000013397514734, guid: 50147d929fb926b4eb555a4d0b89ab60, type: 3}
   - {fileID: 1000010706944468, guid: 44f60cf25f94eed4a98f3dcc6e5d04fc, type: 3}

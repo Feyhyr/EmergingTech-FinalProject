@@ -15,6 +15,13 @@ public class SpawnFood : MonoBehaviour
     float prefabTimer = 3.0f;
     public int index;
 
+    public AudioClip audioSFX;
+
+    public void PlayAudio()
+    {
+        AudioManager.Instance.Play(audioSFX);
+    }
+
     private void Start()
     {
         GameObject gameMger = GameObject.Find("GameManager");
@@ -54,6 +61,7 @@ public class SpawnFood : MonoBehaviour
 
     public void Spawner()
     {
+        PlayAudio();
         randomIndex = Random.Range(0, gm.foodList[index].ingredientsList.Count);
         GameObject instance = Instantiate(gm.foodList[index].ingredientsList[randomIndex], location.position + new Vector3(Random.Range(-2, 2), 0, 0), Random.rotation);
         instance.transform.parent = location;

@@ -7,6 +7,13 @@ public class PlatedIngredients : MonoBehaviour
     private SpawnFood sp;
     private GameManager gm;
 
+    public AudioClip audioSFX;
+
+    public void PlayAudio()
+    {
+        AudioManager.Instance.Play(audioSFX);
+    }
+
     private void Start()
     {
         GameObject gameMger = GameObject.Find("GameManager");
@@ -27,6 +34,7 @@ public class PlatedIngredients : MonoBehaviour
             {
                 gm.foodList[sp.index].ingredientsLeft[sp.randomIndex]--;
             }
+            PlayAudio();
             Destroy(collision.gameObject);
         }
     }

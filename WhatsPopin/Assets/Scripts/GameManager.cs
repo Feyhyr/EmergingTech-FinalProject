@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public List<FoodSO> foodList;
     public Button recipeSelect;
     public Text foodName;
+    public GameObject cookingMenuUI;
 
     public int foodIndex = 0;
 
     static GameManager instance;
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelLoaded;
+    }
 
     void Awake()
     {
@@ -55,4 +62,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenuScene")
+        {
+            cookingMenuUI = GameObject.Find("CookingMenuUI");
+            recipeSelect = GameObject.Find("FoodBTN").GetComponent<Button>();
+            foodName = GameObject.Find("FoodNameText").GetComponent<Text>();
+            cookingMenuUI.SetActive(false);
+        }
+    }
 }

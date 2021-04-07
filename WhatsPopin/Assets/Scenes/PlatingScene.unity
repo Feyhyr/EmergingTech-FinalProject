@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 304540666}
   - component: {fileID: 304540665}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: FoodplacementTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -795,7 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b4aabb456ca0d43b344811e725f383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPlacement: {fileID: 0}
+  foodPlacement: {fileID: 304540666}
 --- !u!4 &304540666
 Transform:
   m_ObjectHideFlags: 0
@@ -2582,7 +2582,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: UIScene
+          m_StringArgument: MainMenuScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1316680963

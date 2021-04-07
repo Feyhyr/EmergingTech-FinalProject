@@ -14,10 +14,11 @@ public class SpawnFood : MonoBehaviour
 
     float spawnTime;
     float prefabTimer = 3.0f;
-    bool allReady = true;
     public int index;
 
     public AudioClip audioSFX;
+
+    private List<bool> checkList;
 
     public void PlayAudio()
     {
@@ -42,6 +43,8 @@ public class SpawnFood : MonoBehaviour
         gm.foodList[2].ingredientsLeft[0] = 5;
         gm.foodList[2].ingredientsLeft[1] = 5;
         gm.foodList[2].ingredientsLeft[2] = 5;
+
+        checkList = new List<bool>(new bool[gm.foodList[index].ingredientsList.Count]);
     }
 
     private void Update()
@@ -58,17 +61,14 @@ public class SpawnFood : MonoBehaviour
         for (int i = 0; i < gm.foodList[index].ingredientsList.Count; i++)
         {
             foodText.text += gm.foodList[index].ingredientName[i] + ": " + gm.foodList[index].ingredientsLeft[i] + "\n";
-        }
-
-        foreach (int check in gm.foodList[index].ingredientsLeft)
-        {
-            if (check != 0)
+            
+            if (gm.foodList[index].ingredientsLeft[i] == 0)
             {
-                allReady = false;
+                checkList[i] = true;
             }
         }
 
-        if (allReady)
+        if (isReady())
         {
             SceneManager.LoadSceneAsync("PlatingScene");
         }
@@ -83,4 +83,15 @@ public class SpawnFood : MonoBehaviour
         Destroy(instance, prefabTimer);
     }
 
+    private bool isReady()
+    {
+        for (int i = 0; i < gm.foodList[index].ingredientsList.Count; i++)
+        {
+            if (checkList[i] == false)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }

@@ -24,7 +24,7 @@ MonoBehaviour:
   ingredientName:
   - Cheese
   - Tomato
-  - Chili
+  - Chili Flakes
   - Pepper
   - Onion
-  ingredientsLeft: 0400000007000000030000000300000002000000
+  ingredientsLeft: 0000000005000000010000000100000000000000

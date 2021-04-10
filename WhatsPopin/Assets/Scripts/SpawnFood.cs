@@ -78,7 +78,7 @@ public class SpawnFood : MonoBehaviour
     {
         PlayAudio();
         randomIndex = Random.Range(0, gm.foodList[index].ingredientsList.Count);
-        GameObject instance = Instantiate(gm.foodList[index].ingredientsList[randomIndex], location.position + new Vector3(Random.Range(-1, 2), 0, 0), Random.rotation);
+        GameObject instance = Instantiate(gm.foodList[index].ingredientsList[randomIndex], location.position + new Vector3(Random.Range(-0.5f, 0.5f), 0, 0), Random.rotation);
         instance.transform.parent = location;
         Destroy(instance, prefabTimer);
     }

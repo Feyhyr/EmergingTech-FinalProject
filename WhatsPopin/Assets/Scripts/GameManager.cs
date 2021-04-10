@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     static GameManager instance;
 
+    public GameObject platePrefab;
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnLevelLoaded;
@@ -71,5 +73,10 @@ public class GameManager : MonoBehaviour
             foodName = GameObject.Find("FoodNameText").GetComponent<Text>();
             cookingMenuUI.SetActive(false);
         }
+    }
+
+    public void ResetPosition()
+    {
+        Instantiate(platePrefab);
     }
 }

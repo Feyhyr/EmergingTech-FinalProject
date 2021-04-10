@@ -9,6 +9,11 @@ public class FinishedFood : MonoBehaviour
 
     public Transform foodPlacement;
 
+    /*private void Awake()
+    {
+        gameObject.transform.position = new Vector3(4.816f, 2.168f, 1.043f);
+    }*/
+
     // Start is called before the first frame update
     void Start()
     {

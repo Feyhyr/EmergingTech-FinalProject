@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CynthiaScene.unity
+    path: Assets/Scenes/MainGameScene.unity
     guid: cf0e19f74479a9d4c9887015d05f635d
   - enabled: 1
     path: Assets/Scenes/MerikScene(Plating System).unity

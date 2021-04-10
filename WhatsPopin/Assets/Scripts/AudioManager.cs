@@ -8,7 +8,7 @@ public class AudioManager : Singleton<AudioManager>
 {
     public new AudioSource audio;
 
-    public new AudioSource audioTwo;
+    //public new AudioSource audioTwo;
 
     private float sfxVolume = 1f;
     private float mainMenuAudio = 1f;
@@ -28,7 +28,7 @@ public class AudioManager : Singleton<AudioManager>
     public void Update()
     {
         audio.volume = sfxVolume;
-        audioTwo.volume = mainMenuAudio;
+        //audioTwo.volume = mainMenuAudio;
     }
 
     public void updateSFXVolume(float sVolume)

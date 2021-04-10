@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     static GameManager instance;
 
     public GameObject platePrefab;
+    public GameObject plate2Prefab;
 
     private void OnEnable()
     {
@@ -78,5 +79,10 @@ public class GameManager : MonoBehaviour
     public void ResetPosition()
     {
         Instantiate(platePrefab);
+    }
+
+    public void ResetPosition2()
+    {
+        Instantiate(plate2Prefab);
     }
 }

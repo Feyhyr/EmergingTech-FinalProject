@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3078146146595209193}
   - component: {fileID: 8110551878313422198}
   - component: {fileID: 7832586350499171913}
+  - component: {fileID: -2506744151538226133}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Plate
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6180362052920474885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.738, y: 2.168, z: 1.034}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 7640946731914297074}
@@ -157,7 +158,18 @@ MonoBehaviour:
       m_Calls: []
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -2506744151538226133}
+        m_MethodName: OnFoodReleased
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -175,6 +187,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5941876, y: 0.20453429, z: 1}
   m_Center: {x: 0.005465448, y: 0.09646165, z: 0}
+--- !u!114 &-2506744151538226133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6180362052920474885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470ebf665e4e84f489627ccdaebb676e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  location: {fileID: 8946987391025080762, guid: 4ed50fae7d85a8a41afc0751d1d8e384,
+    type: 3}
 --- !u!1001 &758722248565711150
 PrefabInstance:
   m_ObjectHideFlags: 0

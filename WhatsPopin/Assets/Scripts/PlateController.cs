@@ -17,7 +17,7 @@ public class PlateController : MonoBehaviour
     /// <summary>
     /// Vibrate the controller when we pick up the ball
     /// </summary>
-    public void OnBallPickedUp()
+    public void OnPlatePickedUp()
     {
         //get refernce to the active hand
         //then haptic impulse
@@ -29,7 +29,7 @@ public class PlateController : MonoBehaviour
     /// To be called from the 'Throwable' 
     /// script's "OnDetachFromHand()' event
     /// </summary>
-    public void OnBallReleased()
+    public void OnPlateReleased()
     {
         //Set a timer of '5 seconds'.
         //If we don't hit the pins within this time,
@@ -39,12 +39,31 @@ public class PlateController : MonoBehaviour
         StartCoroutine(ResetAfterDelay());
     }
 
+    public void OnPlateReleased2()
+    {
+        //Set a timer of '5 seconds'.
+        //If we don't hit the pins within this time,
+        //then we assume the ball has gone astray
+        //Reset and spawn a new ball for the next
+        //try
+        StartCoroutine(ResetAfterDelay2());
+    }
+
     IEnumerator ResetAfterDelay()
     {
         yield return new WaitForSeconds(3.0f);
         Destroy(gameObject); //destroy the gameObject
 
         gameMgr.ResetPosition();
+
+    }
+
+    IEnumerator ResetAfterDelay2()
+    {
+        yield return new WaitForSeconds(3.0f);
+        Destroy(gameObject); //destroy the gameObject
+
+        gameMgr.ResetPosition2();
 
     }
 }

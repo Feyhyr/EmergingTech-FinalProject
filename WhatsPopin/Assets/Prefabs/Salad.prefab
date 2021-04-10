@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1289221080710633983}
   - component: {fileID: 3992229026979613717}
   - component: {fileID: 5122387743312979391}
+  - component: {fileID: 5441718946384806795}
   m_Layer: 0
   m_Name: Salad
   m_TagString: Plate
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4014821432046302281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.738, y: 2.168, z: 1.034}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 290065972861011808}
@@ -218,11 +219,36 @@ MonoBehaviour:
       m_Calls: []
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5441718946384806795}
+        m_MethodName: OnFoodReleased
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
+--- !u!114 &5441718946384806795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014821432046302281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470ebf665e4e84f489627ccdaebb676e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  location: {fileID: 8946987391025080762, guid: 4ed50fae7d85a8a41afc0751d1d8e384,
+    type: 3}
 --- !u!1001 &290676283884946126
 PrefabInstance:
   m_ObjectHideFlags: 0

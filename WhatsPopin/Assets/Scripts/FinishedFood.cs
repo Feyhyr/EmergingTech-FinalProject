@@ -22,7 +22,7 @@ public class FinishedFood : MonoBehaviour
 
         //gm.foodList[index].foodPrefab.transform = foodPlacement;
 
-        Instantiate(gm.foodList[gm.foodIndex].foodPrefab, foodPlacement);
+        Instantiate(gm.foodList[gm.foodIndex].foodPrefab/*, foodPlacement*/);
 
     }
 

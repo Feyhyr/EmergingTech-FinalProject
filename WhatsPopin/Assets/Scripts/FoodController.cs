@@ -24,5 +24,14 @@ public class FoodController : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
 
         gameObject.transform.position = location.transform.position;
+        gameObject.transform.rotation = Quaternion.identity;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            StartCoroutine(ResetAfterDelay());
+        }
     }
 }

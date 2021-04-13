@@ -7,6 +7,7 @@ TagManager:
   - Plate
   - Food
   - Floor
+  - ground
   layers:
   - Default
   - TransparentFX

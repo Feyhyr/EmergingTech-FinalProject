@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2046486318089407185}
   - component: {fileID: 8267512423189198845}
   - component: {fileID: 1446002096329347368}
+  - component: {fileID: -1525615502618112149}
   m_Layer: 0
   m_Name: Pizza
   m_TagString: Food
@@ -218,3 +219,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
+--- !u!114 &-1525615502618112149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728772748170624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470ebf665e4e84f489627ccdaebb676e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  location: {fileID: 8946987391025080762, guid: 4ed50fae7d85a8a41afc0751d1d8e384,
+    type: 3}

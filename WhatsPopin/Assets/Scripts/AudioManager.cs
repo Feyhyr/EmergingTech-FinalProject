@@ -8,12 +8,6 @@ public class AudioManager : Singleton<AudioManager>
 {
     public new AudioSource audio;
 
-    //public new AudioSource audioTwo;
-
-    private float sfxVolume = 1f;
-    private float mainMenuAudio = 1f;
-    //public AudioMixer audioMixer;
-
     public void Play(AudioClip sfxToPlay)
     {
         if (audio.isPlaying)
@@ -25,10 +19,10 @@ public class AudioManager : Singleton<AudioManager>
         audio.Play();
     }
 
-    public void Update()
+    /*public void Update()
     {
         audio.volume = sfxVolume;
-        //audioTwo.volume = mainMenuAudio;
+        audioTwo.volume = mainMenuAudio;
     }
 
     public void updateSFXVolume(float sVolume)
@@ -43,9 +37,9 @@ public class AudioManager : Singleton<AudioManager>
 
 
 
-    /* public void SetVolume(float volume)
-     {
-         audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
-     }*/
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
+    }*/
 
 }
